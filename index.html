@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form"></form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+		<!-- 引入 fireBase SDK -->
+		<script type="module">
+			// 引入 Firebase SDK
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+			import { getFirestore } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
+
+			const firebaseConfig = {
+			  apiKey: "AIzaSyD4I2dcQ7kjhRyj-Jn5xvdpB-wwk_oeTcs",
+			  authDomain: "zen-web-366503.firebaseapp.com",
+			  projectId: "zen-web-366503",
+			  storageBucket: "zen-web-366503.appspot.com",
+			  messagingSenderId: "1041772541742",
+			  appId: "1:1041772541742:web:3f968ddc9137f107efecbf",
+			  measurementId: "G-MEJW1M255K"
+			};
+		  
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const db = getFirestore(app);
+			console.log(db);
+
+		  </script>
+        <script src="app.js"></script>
+    </body>
+</html>
